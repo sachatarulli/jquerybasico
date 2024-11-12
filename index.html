@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="titulo2">JSquery basico</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="menu">
+            <label for="menu"> 𓃑 </label>
+            <ul>
+                <li><a href="index.html"> Pestaña 1</a></li>
+                <li><a href="index.html"> Pestaña 2</a></li>
+                <li><a href="index.html"> Pestaña 3</a></li>
+                <li><a href="index.html"> Pestaña 4</a></li>
+                <li><a href="index.html"> Pestaña 5</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="bodie">
+        <h2 class="display-4" id="titulo">¡Mirá la siguiente imagen!</h5>
+        <div class="card" style="width: 30rem;">
+            <img id="imagen" src="img/imagen.jpg" class="card-img-top" alt="imagen">
+            <div class="card-body">
+                <h5 class="card-title">Chevrolet Camaro</h5>
+                <p class="card-text">Icónico automóvil deportivo estadounidense conocido por su potente rendimiento, diseño agresivo y su legado en la cultura automovilística</p>
+                <div class="botonito">
+                    <button class="btn btn-primary" id="Btn1" type="submit">Esconder</button>
+                    <button class="btn btn-primary" id="Btn2" type="submit">Mostrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <footer class="py-3 my-4">
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Pestaña 1</a></li>
+            <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Pestaña 2</a></li>
+            <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Pestaña 3</a></li>
+            <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Pestaña 4</a></li>
+            <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Pestaña 5</a></li>
+          </ul>
+          <p class="text-center text-body-secondary">&copy; 2024, Argentina</p>
+        </footer>
+      </div>
+      <script>
+        $(document).ready(function() {
+            $("#Btn1").click(function() {
+                $("#imagen").hide();
+                $("#titulo").text("¡No tenemos ninguna imagen!");
+                $("#titulo").removeClass("text-primary");
+                $("#titulo").addClass("text-danger");
+                $("#titulo2").text("¡No tenemos ninguna imagen!");
+            });
+            
+            $("#Btn2").click(function() {
+                $("#imagen").show();
+                $("#titulo").text("¡Mirá la siguiente imagen!");
+                $("#titulo").removeClass("text-danger");
+                $("#titulo").addClass("text-primary");
+                $("#titulo2").text("¡Mirá la siguiente imagen!");
+            });
+        });
+    </script>
+</body>
+</html>
